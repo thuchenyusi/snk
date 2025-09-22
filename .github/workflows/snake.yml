@@ -1,5 +1,6 @@
 name: Generate Snake
 
+# Controls when the action will run.
 on:
   # run automatically every 24 hours
   schedule:
@@ -11,7 +12,7 @@ on:
   # run on every push on the main branch
   push:
     branches:
-    - main
+      - main
 
 jobs:
   generate:
@@ -29,6 +30,7 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
       # push the content of <build_dir> to a branch
       # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
